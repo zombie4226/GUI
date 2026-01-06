@@ -1,0 +1,13 @@
+import tkinter as tk
+
+
+root = tk.Tk()
+root.title("Mijn opdracht GUI")
+a = tk.Button(root,text='yusuf')
+b = tk.Button(root,text='is')
+c = tk.Button(root,text='pic')
+a.pack(pady=5)
+b.pack(pady=5)
+c.pack(pady=5)
+
+root.mainloop()
