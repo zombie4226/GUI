@@ -1,0 +1,10 @@
+import tkinter as tk
+root = tk.Tk()
+root.title("Mijn opdracht GUI")
+
+label = tk.Label(root)
+button = tk.Button(root, text='knop')
+button.pack(side=tk.BOTTOM  )
+label.pack(side=tk.TOP)
+
+root.mainloop()
