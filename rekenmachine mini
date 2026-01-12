@@ -1,0 +1,43 @@
+import tkinter as tk
+root = tk.Tk()
+root.title("REKENMACHINE")
+
+def bereken():
+    v1 = int(entry1.get())
+    v2 = int(entry2.get())
+    som = v1 + v2
+    entry3.delete(0, tk.END)
+    entry3.insert(0, som)
+def clear():
+    entry1.delete(0,tk.END)
+    entry2.delete(0,tk.END)
+    entry3.delete(0,tk.END)
+
+
+
+
+label1 = tk.Label(root,text='GETAL1')
+label1.grid(row=0, column=0)
+
+label2 = tk.Label(root,text='GETAL2')
+label2.grid(row=1, column=0)
+
+label3 = tk.Label(root,text='Resultaat')
+label3.grid(row=3,column=0)
+
+entry1 = tk.Entry(root, text='')
+entry1.grid(row = 0, column = 1)
+
+entry2 = tk.Entry(root, text='')
+entry2.grid(row = 1, column = 1)
+
+button = tk.Button(root,text='Bereken', command=bereken)
+button.grid(row=4, column=0)
+
+button1 = tk.Button(root,text='Clear',command=clear)
+button1.grid(row=4, column=1)
+
+entry3 = tk.Entry(root)
+entry3.grid(row=3, column=1)
+
+root.mainloop()
