@@ -1,0 +1,65 @@
+import tkinter as tk
+from tkinter import ttk
+
+
+root = tk.Tk()
+root.title("frame")
+
+bovenframe = tk.LabelFrame(root,bg="lightblue",padx=10,pady=10)
+bovenframe.pack(padx=20, pady=20)
+
+middenframe = tk.LabelFrame(root, bg="light green", padx=10, pady=10)
+middenframe.pack(padx=20, pady=20)
+
+onderframe = tk.LabelFrame(root, bg="white", padx=10, pady=10)
+onderframe.pack(padx=20, pady=20)
+
+label1 = tk.Label(bovenframe, text="Voornaam")
+label1.grid(row=0, column=0, padx=10, pady=5,)
+
+entry1 = tk.Entry(bovenframe)
+entry1.grid(row=0, column=1, padx=10, pady=5)
+
+label2 = tk.Label(bovenframe, text="Familienaam")
+label2.grid(row=1, column=0, padx=10, pady=5,)
+
+entry2 = tk.Entry(bovenframe)
+entry2.grid(row=1, column=1, padx=10, pady=5)
+
+
+keuze =tk.StringVar()
+label1 = tk.Label(middenframe, text="geslacht")
+label1.grid(row=0, column=0, padx=10, pady=5)
+radiobuttons = tk.Radiobutton(middenframe, text='M',value='M')
+radiobuttons.grid(row=0, column=1, padx=10, pady=5)
+radiobuttons1 = tk.Radiobutton(middenframe, text='V',value='V')
+radiobuttons1.grid(row=0, column=2, padx=10, pady=5)
+
+beroepen = ["Arts", "Verpleegkundige", "Leraar", "Professor", "Student",
+    "Ingenieur", "Programmeur", "Data Scientist", "Architect", "Advocaat",
+    "Rechter", "Journalist", "Schrijver", "Kunstenaar", "Muzikant",
+    "Acteur", "Zanger", "Danser", "Chef-kok", "Bakker",
+    "Politicus", "Brandweerman", "Politieagent", "Pilot", "Treinmachinist",
+    "Fotograaf", "Ontwerper", "Timmerman", "Elektricien", "Monteur",
+    "Boekhouder", "Bankier", "Marketing Specialist", "Verkoper", "Manager",
+    "Wetenschapper", "Bioloog", "Chemicus", "Fysicus", "Psycholoog",
+    "Sociaal Werker", "Therapeut", "Consultant", "Ondernemer", "Buschauffeur",
+    "Taxi-chauffeur", "Kapster", "Make-up Artist", "Modeontwerper", "Programmaontwikkelaar"
+]
+label3 = tk.Label(onderframe,text='Beroep')
+label3.grid(row=0,column=0)
+dropdown = ttk.Combobox(onderframe)
+dropdown.set('Kies uw beroep uit de lijst.')
+dropdown.grid(row=0, column=2, ipadx=10)
+
+label3 = tk.Label(onderframe,text='Beroep')
+label3.grid(row=0,column=0)
+dropdown = ttk.Combobox(onderframe,values=beroepen)
+dropdown.set('Kies uw beroep uit de lijst.')
+dropdown.grid(row=0, column=2, ipadx=10)
+
+
+root.mainloop()
+
+
+
