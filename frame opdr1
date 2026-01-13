@@ -1,0 +1,23 @@
+import tkinter as tk
+root = tk.Tk()
+root.title("frame")
+
+bovenframe = tk.LabelFrame(root,text= 'zone1',bg="green",padx=10,pady=10)
+bovenframe.pack(padx=20, pady=20)
+
+middenframe = tk.LabelFrame(root,text= 'zone2', bg="yellow", padx=10, pady=10)
+middenframe.pack(padx=20, pady=20)
+
+onderframe = tk.LabelFrame(root,text= 'zone3', bg="orange", padx=10, pady=10)
+onderframe.pack(padx=20, pady=20)
+
+label1 = tk.Label(bovenframe,text='bovenste gedeelte')
+label1.grid(row=0, column=0)
+
+label2 = tk.Label(middenframe,text='middelste gedeelte')
+label2.grid(row=1, column=0)
+
+label3 = tk.Label(onderframe,text='onderste gedeelte')
+label3.grid(row=3,column=0)
+
+root.mainloop()
